@@ -1,17 +1,38 @@
-export const slideStyles = (currentIndex) => {
+/* Container */
+
+export const containerStyle = (containerWidth) => ({
+    width: `${containerWidth ? containerWidth : 100}%`, // Container width
+    overflow: 'hidden',
+    position: 'relative',
+    textAlign: 'center',
+    border: '2px solid black',
+    height: '100%' // Container height
+});
+
+/* Slides */
+
+export const slideStyle = (currentIndex) => {
     return {
         display: 'flex',
         transition: 'transform 0.5s ease-in-out',
         transform: `translateX(-${currentIndex * 100}%)`,
+        width: '100%',
+        height: '100%'
     }
+  };
+
+/* Slide item */
+
+export const slideItemStyle = {
+    flexShrink: 0,
+    width: '100%',
+    height: '100%',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
 };
 
-export const containerStyles = {
-    width: '100%',
-    overflow: 'hidden',
-    position: 'relative',
-    textAlign: 'center' 
-};
+/* Navigation Buttons */
 
 export const nextBtnStyle = {
     position: 'absolute',
@@ -24,7 +45,7 @@ export const nextBtnStyle = {
     border: 'none',
     padding: '10px',
     cursor: 'pointer'
-};
+  };
 
 export const prevBtnStyle = {
     position: 'absolute',
@@ -37,4 +58,4 @@ export const prevBtnStyle = {
     border: 'none',
     padding: '10px',
     cursor: 'pointer',
-};
+  };

@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { slideStyles, nextBtnStyle, prevBtnStyle, containerStyles } from './styles';
+import { slideStyle, nextBtnStyle, prevBtnStyle, containerStyle, slideItemStyle } from './styles';
 
-const ReactLiteCarousel = ({ children, autoPlay = false, autoPlayInterval = 3000, displayButtons = true }) => {
+const ReactLiteCarousel = ({ children, autoPlay = false, autoPlayInterval = 3000, displayButtons = true, containerWidth = null }) => {
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const totalSlides = React.Children.count(children);
@@ -43,11 +43,11 @@ const ReactLiteCarousel = ({ children, autoPlay = false, autoPlayInterval = 3000
   }, [currentIndex]);
 
   return (
-    <div style={containerStyles}>
+    <div style={containerStyle(containerWidth)}>
       {/* Slides */}
-      <div style={slideStyles(currentIndex)}>
+      <div style={slideStyle(currentIndex)}>
         {React.Children.map(children, (child, index) => (
-          <div key={index} style={{ flex: '0 0 100%' }}>{child}</div>
+          <div key={index} style={slideItemStyle}>{child}</div>
         ))}
       </div>
 
