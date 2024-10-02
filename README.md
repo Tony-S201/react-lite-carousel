@@ -1,5 +1,10 @@
 # react-lite-carousel
 
+# ⚠️ **Disclaimer** ⚠️
+
+🚧 This package is under active development and is **not functional yet**.  
+Use at your own risk and avoid using it in production.
+
 react-lite-carousel is a lightweight and minimalistic carousel component for React, designed to be simple, fast, and easy to integrate into your projects.
 
 ## Features
