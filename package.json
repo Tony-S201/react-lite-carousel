@@ -1,0 +1,24 @@
+{
+  "name": "react-lite-carousel",
+  "version": "1.0.0",
+  "description": "react-carousel-lite is a lightweight and minimalistic carousel component for React, designed to be simple, fast and easy to integrate into your projects.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tony-S201/react-lite-carousel.git"
+  },
+  "keywords": ["react", "carousel", "lite", "slider"],
+  "author": "Tony S",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Tony-S201/react-lite-carousel/issues"
+  },
+  "homepage": "https://github.com/Tony-S201/react-lite-carousel#readme",
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  }
+}
