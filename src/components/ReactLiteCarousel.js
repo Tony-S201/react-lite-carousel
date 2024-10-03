@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { slideStyle, nextBtnStyle, prevBtnStyle, containerStyle, slideItemStyle } from './styles';
+import { slideStyle, nextBtnStyle, prevBtnStyle, containerStyle, slideItemStyle } from '../styles';
 
 const ReactLiteCarousel = ({ children, autoPlay = false, autoPlayInterval = 3000, displayButtons = true, containerWidth = null, btnBackgroundColor = '#757575', btnArrowColor = '#FFFFFF', btnRounded = false }) => {
 
