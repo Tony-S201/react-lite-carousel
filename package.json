@@ -1,13 +1,15 @@
 {
   "name": "react-lite-carousel",
-  "version": "1.3.0",
+  "version": "1.3.3",
   "description": "react-carousel-lite is a lightweight and minimalistic carousel component for React, designed to be simple, fast and easy to integrate into your projects.",
   "main": "dist/index.js",
   "files": [
-    "dist"
+    "dist/",
+    "README.md",
+    "package.json"
   ],
   "scripts": {
-    "build": "babel src --out-dir dist --copy-files && cp README.md dist/ && cp package.json dist/",
+    "build": "babel src --out-dir dist --copy-files",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
