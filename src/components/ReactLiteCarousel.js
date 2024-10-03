@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { slideStyle, nextBtnStyle, prevBtnStyle, containerStyle, slideItemStyle } from './styles';
 
-const ReactLiteCarousel = ({ children, autoPlay = false, autoPlayInterval = 3000, displayButtons = true, containerWidth = null }) => {
+const ReactLiteCarousel = ({ children, autoPlay = false, autoPlayInterval = 3000, displayButtons = true, containerWidth = null, btnBackgroundColor = '#757575', btnArrowColor = '#FFFFFF', btnRounded = false }) => {
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const totalSlides = React.Children.count(children);
@@ -36,12 +36,6 @@ const ReactLiteCarousel = ({ children, autoPlay = false, autoPlayInterval = 3000
     }
   }, [autoPlay, autoPlayInterval]);
 
-  /* DEBUG */
-  useEffect(() => {
-    console.log('total slides : ' + totalSlides)
-    console.log('current index : ' + currentIndex)
-  }, [currentIndex]);
-
   return (
     <div style={containerStyle(containerWidth)}>
       {/* Slides */}
@@ -55,14 +49,14 @@ const ReactLiteCarousel = ({ children, autoPlay = false, autoPlayInterval = 3000
         <>
           <button
             onClick={prevSlide}
-            style={prevBtnStyle}
+            style={prevBtnStyle(btnBackgroundColor, btnArrowColor, btnRounded)}
           >
             &lt;
           </button>
 
           <button
             onClick={nextSlide}
-            style={nextBtnStyle}
+            style={nextBtnStyle(btnBackgroundColor, btnArrowColor, btnRounded)}
           >
             &gt;
           </button>
